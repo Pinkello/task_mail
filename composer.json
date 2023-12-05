@@ -9,15 +9,10 @@
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mailhog/mhsendmail"
-        }
-    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "league/oauth2-google": "^4.0",
         "phpmailer/phpmailer": "^6.9",
         "vlucas/phpdotenv": "^5.6"
     },

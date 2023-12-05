@@ -1,18 +1,12 @@
 <section id="main">
-    <form action="<?= base_url('home/sendEmail') ?>">
+    <form action="<?= base_url('home/sendEmail') ?>" method="post">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="subject" class="form-label" placeholder=<?php echo lang('Text.mail_subject_placeholder') ?>><?php echo lang('Text.mail_subject_label') ?> </label>
+            <input type="text" class="form-control" name="subject">
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <h6><label for="notes" placeholder=<?php echo lang('Text.mail_content_placeholder') ?>><?php echo lang('Text.mail_content_label') ?></label></h6>
+        <textarea name="content" style="color: black; font-size:20px; width:99%;" class="form-control" name="notes" rows="5"></textarea>
+
+        <button type="submit" class="btn btn-primary"><?php echo lang('Text.mail_button_submit') ?></button>
     </form>
 </section>
