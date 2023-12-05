@@ -1,5 +1,6 @@
-</article>
-<!-- Copyright -->
+</section>
+
+
 <footer class="footer-copyright text-center py-3">
     <?php echo lang('Text.language') ?>:
     <a class="fi fi-gb" href="<?= site_url('lang/en') ?>" role="button"></a>
@@ -9,20 +10,20 @@
     <a href="https://www.linkedin.com/in/piotr-pindel-a0358b187/"> Piotr Pindel</a>
 </footer>
 
-<!-- Copyright -->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+
 </body>
 
 </html>
-
-<style>
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer {
-        margin-top: auto;
-        background-color: black;
-    }
-</style>

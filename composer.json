@@ -9,13 +9,21 @@
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mailhog/mhsendmail"
+        }
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "phpmailer/phpmailer": "^6.9",
         "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
+        "mailosaur/mailosaur": "^7.11",
         "mikey179/vfsstream": "^1.6",
         "phpunit/phpunit": "^9.1"
     },

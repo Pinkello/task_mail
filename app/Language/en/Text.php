@@ -1,8 +1,10 @@
 <?php
 
 return [
-    'homepage' => 'Homepage',
-    'language' => "Lang",
+    'homepage_title' => 'Homepage',
+    'language' => 'Lang',
+
+    'login_title' => 'Log in',
 
 
 ];
