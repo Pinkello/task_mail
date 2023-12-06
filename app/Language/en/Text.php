@@ -27,4 +27,6 @@ return [
     'password_required' => 'Password is required',
     'password_too_short' => 'Password needs to be longer than 5 characters',
     'password_too_long' => 'Password needs to be shorter than 20 characters',
+
+    'email_fail' => 'Email sending didnt go through',
 ];

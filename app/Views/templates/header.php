@@ -45,7 +45,7 @@ $authentication = Services::authentication(); ?>
                 <a href="https://www.comarch.com/">Link</a>
                 <a href=<?= base_url('/logout') ?>>Wyloguj się</a>
             <?php } else { ?>
-                <a href=<?= base_url('/login') ?>>Zaloguj się</a>
+                <a class="soloLogin" href=<?= base_url('/login') ?>>Zaloguj się</a>
             <?php } ?>
 
         </div>

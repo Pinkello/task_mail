@@ -28,4 +28,6 @@ return [
     'password_required' => 'Hasło jest wymagane',
     'password_too_short' => 'Hasło musi miec conajmniej 5 znaków',
     'password_too_long' => 'Hasło nie moze miec więcej niż 20 znaków',
+
+    'email_fail' => 'Wysyłanie emaila nie powiodło się.',
 ];
