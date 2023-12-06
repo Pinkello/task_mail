@@ -18,7 +18,8 @@ body footer {
   background-color: #212529;
 }
 body .main-content {
-  height: calc(100vh - 120px);
+  height: calc(100% - 120px);
+  min-height: calc(100vh - 120px);
   background-color: #f1f1f1;
 }
 body .main-content .sidenav {
@@ -84,7 +85,12 @@ body .main-content #main .content_home .form_inside {
 body .main-content #main .content_home .form_inside form {
   width: 80%;
 }
-body .main-content #main .content_home .form_inside .checks {
+body .main-content #main .content_home .form_inside .checkSkills,
+body .main-content #main .content_home .form_inside .checkTrainings,
+body .main-content #main .content_home .form_inside .checkCompanies {
+  margin-left: 50px;
+}
+body .main-content #main .content_home .form_inside .hidden {
   display: none;
 }
 body .main-content .titleLogin {

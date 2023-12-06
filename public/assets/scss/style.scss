@@ -19,7 +19,8 @@ body {
   }
 
   .main-content {
-    height: calc(100vh - 120px);
+    height: calc(100% - 120px);
+    min-height: calc(100vh - 120px);
     background-color: #f1f1f1;
 
     .sidenav {
@@ -91,7 +92,12 @@ body {
             width: 80%;
           }
 
-          .checks {
+          .checkSkills,
+          .checkTrainings,
+          .checkCompanies {
+            margin-left: 50px;
+          }
+          .hidden {
             display: none;
           }
         }

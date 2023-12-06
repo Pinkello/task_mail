@@ -16,6 +16,39 @@ class Home extends BaseController
 
     public function index()
     {
+        $trainingModel = new  \App\Models\TrainingCategoryModel();
+        $training_categories = $trainingModel->findAll();
+        $combinedTrainingCategories = [];
+
+        foreach ($training_categories as $category) {
+            $combinedTrainingCategories[] = $category['name'];
+        }
+
+        $data['categoriesTraining'] = $combinedTrainingCategories;
+
+        $skillModel = new  \App\Models\SkillModel();
+        $skill_categories = $skillModel->findAll();
+        $combinedSkillCategories = [];
+
+        foreach ($skill_categories as $category) {
+            $combinedSkillCategories[] = $category['name'];
+        }
+
+        $data['categoriesSkill'] = $combinedSkillCategories;
+
+
+        $companyModel = new  \App\Models\CompanyModel();
+        $company_categories = $companyModel->findAll();
+        $combinedCompanyCategories = [];
+
+        foreach ($company_categories as $category) {
+            $combinedCompanyCategories[] = $category['name'];
+        }
+
+        $data['categoriesCompany'] = $combinedSkillCategories;
+
+
+
         $data['title'] = lang('Text.homepage_title');
         echo view('templates/header', $data);
         echo view('home/home.php', $data);

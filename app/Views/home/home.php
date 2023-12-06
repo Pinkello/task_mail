@@ -12,21 +12,56 @@
                             <label class="form-check-label" for="flexSwitchCheckDefault">Wyślij maila do wszystkich użytkowników</label>
                         </div>
                     </div>
-                    <div class="form-group checks">
+                    <div class="form-group checks hidden">
                         <h5>Wybierz kryteria, według których chcesz wybrać odbiorców</h5>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Umiejętności</label>
+                            <input class="form-check-input" type="checkbox" id="skills" value="skills">
+                            <label class="form-check-label" for="skills">Umiejętności</label>
                         </div>
-
+                        <br />
+                        <?php
+                        foreach ($categoriesTraining as $category) {
+                            $no_space_category = str_replace(' ', '_', $category);
+                        ?>
+                            <div class="form-check form-check-inline hidden checkSkills">
+                                <input class="form-check-input" type="checkbox" id=<?php echo $no_space_category ?> value=<?php echo $category ?>>
+                                <label class="form-check-label" for=<?php echo $no_space_category ?>><?php echo $category ?></label>
+                            </div>
+                        <?php
+                        }
+                        ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Odbyte szkolenia</label>
+                            <input class="form-check-input" type="checkbox" id="trainings" value="trainings">
+                            <label class="form-check-label" for="trainings">Odbyte szkolenia</label>
                         </div>
+                        <br />
+                        <?php
+                        foreach ($categoriesSkill as $category) {
+                            $no_space_category = str_replace(' ', '_', $category);
+                        ?>
+                            <div class="form-check form-check-inline hidden checkTrainings">
+                                <input class="form-check-input" type="checkbox" id=<?php echo $no_space_category ?> value=<?php echo $category ?>>
+                                <label class="form-check-label" for=<?php echo $no_space_category ?>><?php echo $category ?></label>
+                            </div>
+                        <?php
+                        }
+                        ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Firma</label>
+                            <input class="form-check-input" type="checkbox" id="companies" value="companies">
+                            <label class="form-check-label" for="companies">Firma</label>
                         </div>
+                        <br />
+                        <?php
+                        foreach ($categoriesCompany as $category) {
+                            $no_space_category = str_replace(' ', '_', $category);
+                        ?>
+                            <div class="form-check form-check-inline hidden checkCompanies">
+                                <input class="form-check-input" type="checkbox" id=<?php echo $no_space_category ?> value=<?php echo $category ?>>
+                                <label class="form-check-label" for=<?php echo $no_space_category ?>><?php echo $category ?></label>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                     <div class="form-group">
                         <h5><label for="subject" class="form-label" placeholder=<?php echo lang('Text.mail_subject_placeholder') ?>><?php echo lang('Text.mail_subject_label') ?> </label></h5>
@@ -51,6 +86,30 @@
                 $('.checks').slideUp();
             } else {
                 $('.checks').slideDown();
+            }
+        });
+
+        $('#skills').change(function() {
+            if ($(this).is(':checked')) {
+                $('.checkSkills').slideDown();
+            } else {
+                $('.checkSkills').slideUp();
+            }
+        });
+
+        $('#trainings').change(function() {
+            if ($(this).is(':checked')) {
+                $('.checkTrainings').slideDown();
+            } else {
+                $('.checkTrainings').slideUp();
+            }
+        });
+
+        $('#companies').change(function() {
+            if ($(this).is(':checked')) {
+                $('.checkCompanies').slideDown();
+            } else {
+                $('.checkCompanies').slideUp();
             }
         });
     });
