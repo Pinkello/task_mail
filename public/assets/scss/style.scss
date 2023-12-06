@@ -1,72 +1,131 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    header {
-        height: 60px;
-        text-align: center;
-        background-color: #212529;
-    }
-    
-    footer {
-        height:60px;
-        color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  header {
+    height: 60px;
+    text-align: center;
+    background-color: #212529;
+  }
+
+  footer {
+    height: 60px;
+    color: white;
+    margin-top: auto;
+    background-color: #212529;
+  }
+
+  .main-content {
+    height: calc(100vh - 120px);
+    background-color: #f1f1f1;
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        color: #f1f1f1;
+      }
+
+      .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      a:last-child {
         margin-top: auto;
-        background-color: #212529;
+        margin-bottom: 30px;
+      }
     }
 
-    .main-content{
-       
-        .sidenav {
-            height: 100%; /* 100% Full-height */
-            width: 0; /* 0 width - change this with JavaScript */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Stay on top */
-            top: 0; /* Stay at the top */
-            left: 0;
-            background-color: #111; /* Black*/
-            overflow-x: hidden; /* Disable horizontal scroll */
-            padding-top: 60px; /* Place content 60px from the top */
-            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    #main {
+      transition: margin-left 0.5s;
+      padding: 20px;
+      display: flex;
 
-            a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-              }
+      .content_home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-              a:hover {
-                color: #f1f1f1;
-              }
+        .title_home {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          padding: 20px 0px 40px 0px;
+        }
 
-              .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-              }
+        .form_inside {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          form {
+            width: 80%;
           }
 
-
-          #main {
-            transition: margin-left .5s;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            form{
-              width: 70%;
-              
-            }
+          .checks {
+            display: none;
           }
-
+        }
+      }
     }
-   
+
+    .titleLogin {
+      animation: slideFromTop 1s ease-in-out;
+      color: #002266;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    textarea {
+      color: black;
+      font-size: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

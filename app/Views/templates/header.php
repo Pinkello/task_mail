@@ -2,8 +2,11 @@
 
 use CodeIgniter\Config\Services;
 
+$session = session();
+
 // Pobranie serwisu autentykacji
 $authentication = Services::authentication(); ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +21,7 @@ $authentication = Services::authentication(); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@ $authentication = Services::authentication(); ?>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
             <div class="container-fluid">
                 <button class="nav-button" onclick="openNav()">☰</button>
-                <a class=" navbar-brand" href="#">Navbar</a>
+                <a class=" navbar-brand" href="#">Mailer</a>
 
             </div>
         </nav>
@@ -36,8 +39,13 @@ $authentication = Services::authentication(); ?>
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <?php if ($session->has('person')) { ?>
+                <a href="https://github.com/Pinkello">Github</a>
+                <a href="https://www.linkedin.com/in/piotr-pindel-a0358b187/">LinkedIn</a>
+                <a href="https://www.comarch.com/">Link</a>
+                <a href=<?= base_url('/logout') ?>>Wyloguj się</a>
+            <?php } else { ?>
+                <a href=<?= base_url('/login') ?>>Zaloguj się</a>
+            <?php } ?>
+
         </div>

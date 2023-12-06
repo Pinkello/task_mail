@@ -9,6 +9,11 @@ use PHPMailer\PHPMailer\Exception;
 
 class Home extends BaseController
 {
+    public function __construct()
+    {
+        helper(['url', 'form', 'Form']);
+    }
+
     public function index()
     {
         $data['title'] = lang('Text.homepage_title');
@@ -36,7 +41,7 @@ class Home extends BaseController
             $mail->SMTPSecure = "ssl";
             $mail->Port       = 465;
 
-            $mail->setFrom('heronavan@gmail.com', 'Mailer');
+            $mail->setFrom('heronavan@gmail.com', 'Piotr Pindel');
             $mail->addAddress('piotr.pindel97@gmail.com', 'Joe User');
 
             $mail->isHTML(true);

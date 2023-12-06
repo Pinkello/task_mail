@@ -7,5 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('lang/{locale}', 'Language::index');
-$routes->get('/login', 'Login::index');
+$routes->get('/startingPage', 'Starting::index');
 $routes->post('/home/sendEmail', 'Home::sendEmail');
+
+$routes->get('/login', 'Login::index');
+$routes->post('/login/check', 'Login::check');
+$routes->get('/logout', 'Login::logout');

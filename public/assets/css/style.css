@@ -17,17 +17,23 @@ body footer {
   margin-top: auto;
   background-color: #212529;
 }
+body .main-content {
+  height: calc(100vh - 120px);
+  background-color: #f1f1f1;
+}
 body .main-content .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
 }
 body .main-content .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -47,13 +53,63 @@ body .main-content .sidenav .closebtn {
   font-size: 36px;
   margin-left: 50px;
 }
+body .main-content .sidenav a:last-child {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
 body .main-content #main {
   transition: margin-left 0.5s;
   padding: 20px;
   display: flex;
+}
+body .main-content #main .content_home {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body .main-content #main form {
-  width: 70%;
+body .main-content #main .content_home .title_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 20px 0px 40px 0px;
 }
+body .main-content #main .content_home .form_inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .main-content #main .content_home .form_inside form {
+  width: 80%;
+}
+body .main-content #main .content_home .form_inside .checks {
+  display: none;
+}
+body .main-content .titleLogin {
+  animation: slideFromTop 1s ease-in-out;
+  color: #002266;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+body .main-content textarea {
+  color: black;
+  font-size: 20px;
+}
+body .main-content .form-group {
+  margin-bottom: 20px;
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=style.css.map */
