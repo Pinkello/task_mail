@@ -44,6 +44,7 @@ $authentication = Services::authentication(); ?>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <?php if ($session->has('person')) { ?>
                 <a href=<?= base_url('/startingPage') ?>> <?php echo lang('Text.header_homepage') ?></a>
+                <a href=<?= base_url('/home') ?>> <?php echo lang('Text.header_mainpage') ?></a>
                 <a href="https://github.com/Pinkello">Github</a>
                 <a href="https://www.linkedin.com/in/piotr-pindel-a0358b187/">LinkedIn</a>
                 <a href="https://www.comarch.com/">Comarch</a>

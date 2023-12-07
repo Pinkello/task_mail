@@ -14,7 +14,7 @@ class Login extends BaseController
     public function index()
     {
         $data = [
-            'title' =>  lang('Text.log_in'),
+            'title' =>  lang('Text.login_title'),
         ];
         echo view('templates/header', $data);
         echo view('auth/login');
@@ -71,7 +71,7 @@ class Login extends BaseController
                 $person_id = $person_info['person_id'];
                 session()->set('person', $person_id);
                 session()->set('person_info', $person_info);
-                return redirect()->to('/');
+                return redirect()->to('/home');
             }
         }
     }

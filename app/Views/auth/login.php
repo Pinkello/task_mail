@@ -1,5 +1,6 @@
-<div class="row gx-0 justify-content-center align-items-center ">
-    <div class="col-5 ">
+<div class="row col-12 gx-0 justify-content-center align-items-center ">
+
+    <div class="col-4 offset-1">
         <h4 class="titleLogin"> <?php echo lang('Text.loginPage_title') ?></h4>
         <hr />
         <br />
@@ -30,7 +31,7 @@
             </div>
         </form>
     </div>
-    <div class="col-4 imgContainer offset-1">
-        <img id="login" src="<?= base_url() ?>/assets/img/photo.jpg" height="400" width="500" class="hidden">
+    <div class="col-6 offset-1 imgContainer">
+        <img id="login" src="<?= base_url() ?>/assets/img/photo.jpg" height="600" width="700" class="hidden">
     </div>
 </div>

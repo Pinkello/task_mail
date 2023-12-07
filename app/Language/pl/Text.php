@@ -5,6 +5,7 @@ return [
     'language' => 'Język',
 
     'login_title' => 'Zaloguj się',
+    'header_mainpage' => 'Strona Mailer',
 
     'mail_subject_placeholder' => 'Podaj temat maila',
     'mail_subject_label' => 'Temat maila',

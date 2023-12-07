@@ -155,7 +155,7 @@ class Home extends BaseController
                 }
             }
         }
-        return redirect()->to(base_url())->with('success_message', lang('Text.homePage_mailsent'));
+        return redirect()->to(base_url('/home'))->with('success_message', lang('Text.homePage_mailsent'));
     }
 
     private function sendEmailFunc($content, $subject, $address, $receiver)

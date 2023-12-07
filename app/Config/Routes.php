@@ -12,9 +12,10 @@ $routes->set404Override(function () {
 
 $routes->get('lang/{locale}', 'Language::index');
 $routes->get('/startingPage', 'Starting::index');
+$routes->get('/', 'Starting::index');
 
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
-    $routes->get('/', 'Home::index');
+    $routes->get('/home', 'Home::index');
     $routes->post('/home/sendEmail', 'Home::sendEmail');
     $routes->get('/logout', 'Login::logout');
 });

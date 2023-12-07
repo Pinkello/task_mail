@@ -5,6 +5,7 @@ return [
     'language' => 'Lang',
 
     'login_title' => 'Log in',
+    'header_mainpage' => 'Mailer page',
 
     'mail_subject_placeholder' => 'Enter the email subject',
     'mail_subject_label' => 'Email Subject',
