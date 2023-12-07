@@ -22,6 +22,7 @@ $authentication = Services::authentication(); ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="<?= base_url('assets/js/script.js') ?>"></script>
 </head>
 
 <body>
@@ -40,11 +41,13 @@ $authentication = Services::authentication(); ?>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <?php if ($session->has('person')) { ?>
+                <a href=<?= base_url('/startingPage') ?>>Strona Domowa</a>
                 <a href="https://github.com/Pinkello">Github</a>
                 <a href="https://www.linkedin.com/in/piotr-pindel-a0358b187/">LinkedIn</a>
-                <a href="https://www.comarch.com/">Link</a>
+                <a href="https://www.cyfronet.com/">Link</a>
                 <a href=<?= base_url('/logout') ?>>Wyloguj się</a>
             <?php } else { ?>
+                <a href=<?= base_url('/startingPage') ?>>Strona Domowa</a>
                 <a class="soloLogin" href=<?= base_url('/login') ?>>Zaloguj się</a>
             <?php } ?>
 

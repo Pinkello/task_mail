@@ -29,6 +29,8 @@ class Home extends BaseController
 
     public function sendEmail()
     {
+        return redirect()->to(base_url())->with('success_message', 'Maile zostały wysłane pomyślnie.');
+
         $content = $this->request->getPost('content');
         $subject = $this->request->getPost('subject');
 
@@ -154,7 +156,7 @@ class Home extends BaseController
                 }
             }
         }
-        return redirect()->to(base_url());
+        // return redirect()->to(base_url());
     }
 
     private function sendEmailFunc($content, $subject, $address, $receiver)

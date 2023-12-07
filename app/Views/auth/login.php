@@ -1,5 +1,5 @@
 <div class="row gx-0 justify-content-center align-items-center ">
-    <div class="col-6">
+    <div class="col-5 ">
         <h4 class="titleLogin">Logowanie do systemu Mailer </h4>
         <hr />
         <br />
@@ -30,25 +30,7 @@
             </div>
         </form>
     </div>
+    <div class="col-4 imgContainer offset-1">
+        <img id="login" src="<?= base_url() ?>/assets/img/photo.jpg" height="400" width="500" class="hidden">
+    </div>
 </div>
-
-
-<script>
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     const loginForm = document.getElementById('form_login');
-    //     loginForm.addEventListener('submit', function(event) {
-    //         event.preventDefault(); // Prevent form submission
-
-    //         const username = document.getElementById('email').value;
-    //         const password = document.getElementById('password').value;
-
-    //         // Perform your validation checks here
-    //         if (username === '' || password === '') {
-    //             alert('Please fill in all fields.');
-    //         } else {
-    //             // Perform AJAX request or other processing here
-    //             alert('Login successful!');
-    //         }
-    //     });
-    // });
-</script>

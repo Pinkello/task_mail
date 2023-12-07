@@ -133,127 +133,22 @@
         <div class="toast-container position-fixed top-10 end-0 p-3">
             <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
-                    <strong class="me-auto">Powiadomienie</strong>
+                    <strong class="me-auto">Błąd!</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body"></div>
             </div>
         </div>
+        <div class="toast-container position-fixed top-10 end-0 p-3">
+            <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Sukces!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Maile zostały wysłane pomyślnie.
+                </div>
+            </div>
+        </div>
     </article>
 </section>
-
-
-<script>
-    $(document).ready(function() {
-        $('#flexSwitchCheckDefault').change(function() {
-            if ($(this).is(':checked')) {
-                $('.checks').slideUp();
-            } else {
-                $('.checks').slideDown();
-            }
-        });
-
-        $('#skills').change(function() {
-            if ($(this).is(':checked')) {
-                $('.checkSkills').slideDown();
-            } else {
-                $('.checkSkills').slideUp();
-            }
-        });
-
-        $('#trainings').change(function() {
-            if ($(this).is(':checked')) {
-                $('.checkTrainings').slideDown();
-            } else {
-                $('.checkTrainings').slideUp();
-            }
-        });
-
-        $('#companies').change(function() {
-            if ($(this).is(':checked')) {
-                $('.checkCompanies').slideDown();
-            } else {
-                $('.checkCompanies').slideUp();
-            }
-        });
-
-        $('#companies').change(function() {
-            if ($(this).is(':checked')) {
-                $('.checkDepartments').slideDown();
-            } else {
-                $('.checkDepartments').slideUp();
-            }
-        });
-
-        $('#database_data').change(function() {
-            if ($(this).is(':checked')) {
-                $('.buttons_database').hide().css({
-                    'display': 'flex',
-                    'flex-direction': 'column'
-                }).slideDown('slow');
-            } else {
-                $('.buttons_database').hide().css({
-                    'flex-direction': 'row'
-                }).slideUp('slow');
-            }
-        });
-
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('.add-to-textarea').on('click', function(e) {
-            e.preventDefault();
-            var linkValue = $(this).data('value');
-            var currentContent = $('#notes').val();
-            var newContent = currentContent + linkValue;
-            $('#notes').val(newContent);
-        });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        console.log("siema");
-        $('#submitBtn').on('click', function() {
-            event.preventDefault();
-            var subjectValue = $('#subject').val().trim();
-            var contentValue = $('#notes').val().trim();
-
-            if (subjectValue === '' || contentValue === '') {
-                showToast('Wypełnij wszystkie pola przed wysłaniem formularza.');
-            } else {
-                $('#myForm').submit();
-            }
-        });
-
-        function showToast(message) {
-            var toast = new bootstrap.Toast(document.getElementById('toast'));
-            $('.toast-body').text(message);
-            toast.show();
-        }
-    });
-</script>
-
-<style>
-    .css-button-rounded--blue {
-        min-width: 130px;
-        height: 40px;
-        color: #fff;
-        font-size: 15px;
-        padding: 5px 10px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px;
-        border: 2px solid #2c0b8e;
-        background: #2c0b8e;
-    }
-
-    .css-button-rounded--blue:hover {
-        background: #fff;
-        color: #2c0b8e
-    }
-</style>
