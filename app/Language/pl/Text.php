@@ -30,4 +30,32 @@ return [
     'password_too_long' => 'Hasło nie moze miec więcej niż 20 znaków',
 
     'email_fail' => 'Wysyłanie emaila nie powiodło się.',
+
+    'startingPage_title' => 'Witamy w aplikacji Mailer',
+    'startingPage_title2' => 'Zaloguj się, aby kontynuować',
+    'startingPage_subtitle' => 'Tech stack zastosowany w aplikacji',
+
+    'errorPage_notfound' => 'Nie znaleziono strony',
+
+    'header_homepage' => 'Strona Domowa',
+    'header_logout' => 'Wyloguj się',
+    'header_login' => 'Zaloguj się',
+
+    'loginPage_title' => 'Logowanie do systemu Mailer',
+
+    'homePage_title' => '  Wybierz do kogo i co wysłać',
+    'homePage_sendtoall' => 'Wyślij maila do wszystkich użytkowników',
+    'homePage_cryteria' => 'Wybierz kryteria, według których chcesz wybrać odbiorców',
+    'homePage_skills' => 'Umiejętności',
+    'homePage_trainings' => 'Odbyte szkolenia',
+    'homePage_companddep' => 'Firma oraz działy',
+    'homePage_databaseDataAdd' => 'Dodaj moje dane z bazy',
+    'homePage_databaseData' => 'Wybierz dane, które chcesz zamieścić w mailu',
+    'homePage_mailsent' => 'Maile zostały wysłane pomyślnie.',
+
+    'toast_error' => 'Błąd!',
+    'toast_success' => 'Sukces!',
+    'toast_mailsent' => ' Maile zostały wysłane pomyślnie.',
+    'toast_empty' => 'Wypełnij wszystkie pola przed wysłaniem formularza',
+
 ];

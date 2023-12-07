@@ -21,6 +21,28 @@
     </script>
 <?php } ?>
 
+<div class="toast-container position-fixed top-10 end-0 p-5">
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto"><?php echo lang('Text.toast_error') ?></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body"></div>
+    </div>
+</div>
+<div class="toast-container position-fixed top-10 end-0 p-5">
+    <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto"><?php echo lang('Text.toast_success') ?></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <?php echo lang('Text.toast_mailsent') ?>
+
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

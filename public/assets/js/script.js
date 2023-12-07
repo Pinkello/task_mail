@@ -3,9 +3,8 @@ $(document).ready(function() {
         event.preventDefault();
         var subjectValue = $('#subject').val().trim();
         var contentValue = $('#notes').val().trim();
-
         if (subjectValue === '' || contentValue === '') {
-            showToast('Wypełnij wszystkie pola przed wysłaniem formularza.');
+            showToast(error_toast);
         } else {
             $('#myForm').submit();
         }
@@ -81,10 +80,9 @@ $(document).ready(function() {
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
 }
+

@@ -5,6 +5,11 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+$routes->set404Override(function () {
+    return view('templates/404');
+});
+
 $routes->get('lang/{locale}', 'Language::index');
 $routes->get('/startingPage', 'Starting::index');
 

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Libraries\Hash;
+
 class Login extends BaseController
 {
     public function __construct()
@@ -59,9 +61,9 @@ class Login extends BaseController
 
             $personModel = new  \App\Models\PersonModel();
             $person_info = $personModel->where('email', $email)->first();
+            $check_password = Hash::check($password, $person_info['password']);
 
-            $check_password = strcmp($password, $person_info['password']);
-            if ($check_password != 0) {
+            if (!$check_password) {
                 session()->setFlashdata('fail', lang('Text.wrong_password'));
 
                 return redirect()->to('/login')->withInput();

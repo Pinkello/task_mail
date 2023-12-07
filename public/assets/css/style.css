@@ -5,7 +5,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 body header {
   height: 60px;
@@ -128,6 +127,9 @@ body .main-content #main .content_home .form_inside form .checkDepartments {
 body .main-content #main .content_home .form_inside form .hidden {
   display: none;
 }
+body .main-content #main .content_home .form_inside form .databaseButtons {
+  padding-left: 0;
+}
 body .main-content .titleLogin {
   animation: slideFromLeft 1s ease-in-out;
   color: #002266;
@@ -235,20 +237,22 @@ body .main-content .form-group {
     transform: translateX(0);
   }
 }
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @keyframes slideFromBottom {
   0% {
     transform: translateY(70%);
   }
   100% {
     transform: translateY(0);
-  }
-}
-@keyframes slideFromLeft {
-  0% {
-    left: -25%;
-  }
-  100% {
-    left: 0;
   }
 }
 @keyframes fadeIn {

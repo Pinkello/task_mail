@@ -1,6 +1,6 @@
 <div class="row gx-0 justify-content-center align-items-center ">
     <div class="col-5 ">
-        <h4 class="titleLogin">Logowanie do systemu Mailer </h4>
+        <h4 class="titleLogin"> <?php echo lang('Text.loginPage_title') ?></h4>
         <hr />
         <br />
 

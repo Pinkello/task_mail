@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  
   header {
     height: 60px;
     text-align: center;
@@ -141,7 +141,12 @@ body {
           .hidden {
             display: none;
           }
+          .databaseButtons{
+            padding-left: 0;
           }
+
+          }
+
         }
       }
     }
@@ -281,6 +286,18 @@ body {
   }
 }
 
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 @keyframes slideFromBottom {
   0% {
@@ -292,15 +309,7 @@ body {
   }
 }
 
-@keyframes slideFromLeft {
-  0% {
-    left: -25%;
-  }
 
-  100% {
-    left: 0;
-  }
-}
 
 @keyframes fadeIn {
   0% {
